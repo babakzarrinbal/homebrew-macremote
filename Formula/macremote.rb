@@ -2,16 +2,16 @@
 class Macremote < Formula
   desc "Your Mac's terminals, files and Claude Code sessions on your phone"
   homepage "https://github.com/babakzarrinbal/homebrew-macremote"
-  version "2026.10.01"
+  version "2026.10.01.1"
 
   on_macos do
     on_arm do
-      url "https://github.com/babakzarrinbal/homebrew-macremote/releases/download/v2026.10.01/macremote-2026.10.01-darwin-arm64.tar.gz"
-      sha256 "a78f41e2bb7318099773c811f14058448f5b2c442b2ac000fbaeff2337db4fa9"
+      url "https://github.com/babakzarrinbal/homebrew-macremote/releases/download/v2026.10.01.1/macremote-2026.10.01.1-darwin-arm64.tar.gz"
+      sha256 "19d3c96ac2fad95c480871efc79233a693d5d1544f3bcea296b0494aa07c27e4"
     end
     on_intel do
-      url "https://github.com/babakzarrinbal/homebrew-macremote/releases/download/v2026.10.01/macremote-2026.10.01-darwin-amd64.tar.gz"
-      sha256 "62118c8f595a9ab6ffd3bb10e3933a09251511c78eebdddb5b4413a9c90e4a70"
+      url "https://github.com/babakzarrinbal/homebrew-macremote/releases/download/v2026.10.01.1/macremote-2026.10.01.1-darwin-amd64.tar.gz"
+      sha256 "09da674b0019b558cfea85e8ab272123eef03c75e1ca96d699ce794e975ebe42"
     end
   end
   depends_on :macos
@@ -30,10 +30,13 @@ class Macremote < Formula
 
   def caveats
     <<~EOS
-      Run it now and at every login:
-        brew services start macremote
-      Then pair your phone: run `macremote pair` and scan the code
-      with the Mac Remote app.
+      Point it at your relay; this starts it (now and at every login)
+      and shows a code to scan with the Mac Remote app:
+        macremote setup your.server:8460
+
+      It shows the relay's certificate pin to compare with
+      `docker exec macremote-relay /relay pin` on the server
+      (or pass it: -pin <sha256>). More phones later: macremote pair.
 
       Installed it before with install.sh? Run `macremote uninstall` first,
       so only one copy runs (your paired phones are kept).
