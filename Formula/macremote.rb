@@ -7,11 +7,11 @@ class Macremote < Formula
   on_macos do
     on_arm do
       url "https://github.com/babakzarrinbal/homebrew-macremote/releases/download/v2026.10.01/macremote-2026.10.01-darwin-arm64.tar.gz"
-      sha256 "bedaa0d0c31fa808017283e7b6b0b2338e1c68c586fd3bc816f9153744568729"
+      sha256 "bb3c30d277b3355083994dd3c5c07a03633c40de9bee3e27691e9feb179bbaa1"
     end
     on_intel do
       url "https://github.com/babakzarrinbal/homebrew-macremote/releases/download/v2026.10.01/macremote-2026.10.01-darwin-amd64.tar.gz"
-      sha256 "efd07364b2fbefb5d00edd461be074086ab0774ea51a86bab6c036a1cda4409f"
+      sha256 "599a3e3c5780b3ff0582d94b6b192ddb42b43579c2565eed6442678b7c1ec2c0"
     end
   end
   depends_on :macos
