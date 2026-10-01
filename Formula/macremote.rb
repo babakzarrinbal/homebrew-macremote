@@ -2,16 +2,16 @@
 class Macremote < Formula
   desc "Your Mac's terminals, files and Claude Code sessions on your phone"
   homepage "https://github.com/babakzarrinbal/homebrew-macremote"
-  version "2026.10.01.6"
+  version "2026.10.01.7"
 
   on_macos do
     on_arm do
-      url "https://github.com/babakzarrinbal/homebrew-macremote/releases/download/v2026.10.01.6/macremote-2026.10.01.6-darwin-arm64.tar.gz"
-      sha256 "f5aad2d02cafbe800e50c182eff450b57f64d21e41cbf481139ba11c0d1b135b"
+      url "https://github.com/babakzarrinbal/homebrew-macremote/releases/download/v2026.10.01.7/macremote-2026.10.01.7-darwin-arm64.tar.gz"
+      sha256 "5941f97d70b43bb4f3f1defe287bb6106c84ac59a754164513433edd49261531"
     end
     on_intel do
-      url "https://github.com/babakzarrinbal/homebrew-macremote/releases/download/v2026.10.01.6/macremote-2026.10.01.6-darwin-amd64.tar.gz"
-      sha256 "0fe7c04837d827742e584a49392758e0b15c22f267473ef33165595445367171"
+      url "https://github.com/babakzarrinbal/homebrew-macremote/releases/download/v2026.10.01.7/macremote-2026.10.01.7-darwin-amd64.tar.gz"
+      sha256 "e9f788c4696eb33fbc11cef36af5a63cd3e8cfbeca042bc0367c689669210e66"
     end
   end
   depends_on :macos
